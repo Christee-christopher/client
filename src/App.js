@@ -11,6 +11,7 @@ import Collection from './Pages/Collection';
 import Blog from './Pages/Blog';
 import Navbar from './componenets/Navbar';
 import Footer from './componenets/Footer';
+import ProductDetails from './Pages/ProductDetails';
 
 function App() {
   return (
@@ -20,6 +21,7 @@ function App() {
       <Routes>
         <Route path="/" element={<HomeScreen />} />
         <Route path='/shop' element={<Shop/>} />
+        <Route path='/shop/:id' element={<ProductDetails />} />
         
         <Route path='/collection' element={<Collection />} />
         <Route path='/pages' element={<Pages/>} />

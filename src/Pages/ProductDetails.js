@@ -1,5 +1,6 @@
 import React from 'react'
-import Product from '../componenets/Product'
+import { useParams } from 'react-router-dom';
+
 
 const products = [
   {   
@@ -148,58 +149,19 @@ const products = [
 
 ]
 
-function Shop() {
+function ProductDetails() {
+  const productId = useParams();
+
+  const product = products.find((product) => product.id === productId);
+
+  // const { id: any } = product;
+
+
   return (
-    <main className='py-[20px]'>
-      <div className='container mx-auto border h-auto'>
-        <div className='flex flex-col gap-x-10 md:flex-row mt-10'>
-          {/* list products */}
-          <section className='border h-full w-full lg:flex-3'>
-            <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6'>
-              {products.map((product) => (
-                <Product key={product.id} product={product} />
-              ))}
+    <div>
 
-            </div>
-
-
-          </section>
-          {/* categories */}
-          <section className='border flex-col h-full w-[500px] lg:flex-2 gap-6'>
-            <div className='border px-[15px] py-[10px]'>
-              <h2 className='font-semibold text-[18px]'>
-                Categories
-              </h2>
-
-            </div>
-
-            <div className='border px-[15px] py-[10px]'>
-              <h2 className='font-semibold text-[18px]'>
-                Color
-              </h2>
-
-            </div>
-
-            <div className='border px-[15px] py-[10px]'>
-              <h2 className='font-semibold text-[18px]'>
-                Filter By Price
-              </h2>
-
-            </div>
-
-            <div className='border px-[15px] py-[10px]'>
-              <h2 className='font-semibold text-[18px]'>
-                Top Rated Products
-              </h2>
-
-            </div>
-          </section>
-        </div>
-
-      </div>
-      
-    </main>
+    </div>
   )
 }
 
-export default Shop
+export default ProductDetails

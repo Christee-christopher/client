@@ -2,6 +2,7 @@ import React from 'react'
 import { LuBadgeDollarSign, LuRadar, LuTruck } from "react-icons/lu"
 import NewArrivals from '../componenets/NewArrivals'
 import Blog from '../componenets/Blog'
+import { Link } from 'react-router-dom'
 
 const NewProduct = [
   {   
@@ -184,7 +185,7 @@ function HomeScreen() {
                 <h1 className='   text-[55px] text-center '>Male Clothes</h1>
                 <p className='py-[5px] px-[20px] text-center'>30% 0ff summer vaccation</p>
                 <div className='px-[50px] py-[10px] text-center'>
-                  <button className='border border-white  uppercase p-[15px] py-[10px] px-[10px] lg:border-black'>Shop now</button>
+                  <Link to='/shop' className='border border-white  uppercase p-[15px] py-[10px] px-[10px] lg:border-black'>Shop now</Link>
                 </div>
               </div>
             </div>
