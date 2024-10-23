@@ -86,7 +86,7 @@ function Navbar() {
                         </div>
                     </div>
                     <div
-                        className={`absolute md:hidden top-28 right-4 w-40  bg-white rounded-lg flex flex-col items-center gap-6 p-2 font-semibold text-[#212a3c] text-lg transform transition-transform ${isMenuOpen ? "block" : "hidden"}`}
+                        className={`absolute md:hidden top-28 right-4 w-40 z-50  bg-white rounded-lg flex flex-col items-center gap-6 p-2 font-semibold text-[#212a3c] text-lg transform transition-transform ${isMenuOpen ? "block" : "hidden"}`}
                     >
                         <li
                             className='list-none w-full text-center p-4 hover:bg-black rounded-xl hover:text-white hover:font-bold hover:shadow-inner hover:shadow-neutral-400 hover:p-5 transition-all cursor-pointer capitalize'
@@ -96,11 +96,10 @@ function Navbar() {
                                 Home
                             </Link>
                         </li>
-                        <li
-                            className='list-none w-full text-center p-4 hover:bg-black rounded-xl hover:text-white hover:font-bold hover:shadow-inner hover:shadow-neutral-400 hover:p-5 transition-all cursor-pointer capitalize'
-                            onClick={toggleMenu}
-                        >
-                            <Link to='/shop'>
+                        <li onClick={toggleMenu}>
+                            <Link to='/shop'
+                                className='list-none w-full text-center p-4 hover:bg-black rounded-xl hover:text-white hover:font-bold hover:shadow-inner hover:shadow-neutral-400 hover:p-5 transition-all cursor-pointer capitalize'
+                            >
                                 Shop
                             </Link>
                         </li>

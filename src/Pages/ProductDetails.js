@@ -150,16 +150,18 @@ const products = [
 ]
 
 function ProductDetails() {
-  const productId = useParams();
+  const param = useParams();
 
-  const product = products.find((product) => product.id === productId);
 
-  // const { id: any } = product;
+   const product = products.find((item) => item.id === param);
+
+//   const { id, image } = product;
 
 
   return (
     <div>
-
+        <p>{product.id}</p>
+        <img src={product.image} alt={product.title} /> 
     </div>
   )
 }

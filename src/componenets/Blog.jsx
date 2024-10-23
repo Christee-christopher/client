@@ -1,5 +1,4 @@
 import React from 'react'
-import { LuShoppingCart } from 'react-icons/lu'
 
 function Blog({ item }) {
   return (
